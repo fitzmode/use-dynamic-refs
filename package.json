@@ -1,7 +1,7 @@
 {
   "name": "use-dynamic-refs",
   "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "description": "A React hook to dynamically set and get DOM/Component refs",
   "author": "fitzmode",
   "license": "MIT",
   "repository": "fitzmode/use-dynamic-refs",
