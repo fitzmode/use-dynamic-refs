@@ -28,10 +28,10 @@ const Example = () =>  {
 
     return ( 
       <>
-        // Simple set ref.
+        {/* Simple set ref. */}
         <span ref={setRef('random_id_3')}></span>
 
-        // Set refs dynamically in Array.map()
+         {/*  Set refs dynamically in Array.map() */}
         { foo.map((eachId, idx) => (
           <div ref={setRef(eachId)}> Hello {each} </div>))}
       </>
