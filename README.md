@@ -1,4 +1,4 @@
-# use-dynamic-refs
+# React use-dynamic-refs
 
 > Made with create-react-library
 
@@ -13,16 +13,32 @@ npm install --save use-dynamic-refs
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React, { useEffect } from 'react';
+import useDynamicRefs from 'use-dynamic-refs';
 
-import MyComponent from 'use-dynamic-refs'
-import 'use-dynamic-refs/dist/index.css'
+const Example = () =>  {
+  const foo = ['random_id_1', 'random_id_2'];
+  const [getRef, setRef] =  useDynamicRefs();
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+  useEffect(() => {
+    // Get ref for specific ID 
+    const id1 = getRef('random_id_1');
+    console.log(id1)
+  }, [])
+
+    return ( 
+      <>
+        // Simple set ref.
+        <span ref={setRef('random_id_3')}></span>
+
+        // Set refs dynamically in Array.map()
+        { foo.map((eachId, idx) => (
+          <div ref={setRef(eachId)}> Hello {each} </div>))}
+      </>
+    )
 }
+
+export default Example;
 ```
 
 ## License

@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+// import  useDynamicRefs  from '.'
 
-describe('ExampleComponent', () => {
-  it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+// describe('useDynamicRefs', () => {
+//   it('is truthy', () => {
+//     expect(useDynamicRefs).toBeTruthy()
+//   })
+// })
